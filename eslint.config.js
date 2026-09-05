@@ -1,6 +1,7 @@
 const js = require('@eslint/js')
 const react = require('eslint-plugin-react')
 const jest = require('eslint-plugin-jest')
+const playwright = require('eslint-plugin-playwright')
 const globals = require('globals')
 
 module.exports = [
@@ -36,10 +37,21 @@ module.exports = [
     }
   },
   {
-    files: ['src/**/*.{js,jsx}', 'test/**/*.{js,jsx}'],
+    files: ['playwright.config.js'],
+    languageOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'module',
+      globals: {
+        ...globals.node
+      }
+    }
+  },
+  {
+    files: ['src/**/*.{js,jsx}', 'test/**/*.{js,jsx}', 'e2e-tests/**/*.{js,jsx}'],
     plugins: {
       react,
-      jest
+      jest,
+      playwright
     },
     languageOptions: {
       ecmaVersion: 2018,
