@@ -12,12 +12,10 @@ const start = async () => {
 }
 
 app.get('/version', (_req, res) => {
-  res.send('11.12.1') // change this string to ensure a new version deployed
+  res.send('11.12.2') // change this string to ensure a new version deployed
 })
 
 app.get('/health', (_req, res) => {
-  // eslint-disable-next-line no-constant-condition
-  if (true) throw 'error...  '
   res.send('ok')
 })
 

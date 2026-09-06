@@ -2,6 +2,10 @@
 
 This repository is used for the CI/CD module of the Full Stack Open course
 
+# Hosted on Render.io
+
+<https://full-stack-open-part11-uu4x.onrender.com>
+
 ## Commands
 
 Start by running `npm install` inside the project folder
