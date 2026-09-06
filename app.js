@@ -11,4 +11,12 @@ const start = async () => {
   console.log(`server started on port ${PORT}`)
 }
 
+app.get('/version', (_req, res) => {
+  res.send('11.12') // change this string to ensure a new version deployed
+})
+
+app.get('/health', (_req, res) => {
+  res.send('ok')
+})
+
 start()
