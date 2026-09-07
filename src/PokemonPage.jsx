@@ -4,6 +4,7 @@ import LoadingSpinner from './LoadingSpinner'
 import { useApi } from './useApi'
 import PokemonAbility from './PokemonAbility'
 import ErrorMessage from './ErrorMessage'
+import PokemonType from './PokemonType'
 
 const formatName = (nameWithDash) => nameWithDash.replace('-', ' ')
 
@@ -41,7 +42,7 @@ const PokemonPage = ({ previous, next }) => {
           <div className="pokemon-name">{pokemon.name}</div>
           <div className="pokemon-types">
             {pokemon.types.map(({ type }) => (
-              <div key={type.name}>{type.name}</div>
+              <PokemonType key={type.name} type={type} />
             ))}
           </div>
           <div className="pokemon-stats" data-testid="stats">
