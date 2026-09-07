@@ -74,7 +74,7 @@ footer {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  height: 470px;
+  height: 492px;
   padding: 16px;
   width: 300px;
 }
@@ -140,6 +140,18 @@ footer {
 .pokemon-ability-type {
   font-size: 10px;
   text-transform: uppercase;
+}
+
+.pokemon-types {
+  display: flex;
+  justify-content: space-around;
+  text-transform: capitalize;
+}
+
+.pokemon-types img {
+  display: block;
+  width: 100px;
+  height: auto;
 }
 
 .pokemon-type-bug {
