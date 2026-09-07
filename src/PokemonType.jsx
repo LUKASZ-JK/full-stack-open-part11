@@ -1,14 +1,13 @@
 import React from 'react'
-import { useApi } from './useApi'
+
+const getTypeIconUrl = typeUrl => {
+  const typeId = typeUrl.split('/').filter(Boolean).pop()
+
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/${typeId}.png`
+}
 
 const PokemonType = ({ type }) => {
-  const { data, error, isLoading } = useApi(type.url)
-
-  if (isLoading || error || !data) {
-    return <div>{type.name}</div>
-  }
-
-  const icon = data.sprites['generation-viii']['sword-shield'].name_icon
+  const icon = getTypeIconUrl(type.url)
 
   return (
     <div>
