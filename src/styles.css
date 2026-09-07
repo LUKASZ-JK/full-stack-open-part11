@@ -145,7 +145,6 @@ footer {
 .pokemon-types {
   display: flex;
   justify-content: space-around;
-  text-transform: capitalize;
 }
 
 .pokemon-types img {
