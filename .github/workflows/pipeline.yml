@@ -71,8 +71,8 @@ jobs:
           title: 'Deployment details'
           description: |
             **Commit:** `${{ github.sha }}`
-            **Message:** `${{ github.event.pull_request.title || github.event.head_commit.message || '<no message>' }}`
-            **Author:** `${{ github.event.pull_request.user.login || github.event.head_commit.author.name || github.actor }}`
+            **Message:** `${{ github.event.head_commit.message || '<no message>' }}`
+            **Author:** `${{ github.event.head_commit.author.name }}`
           color: 0x00ff00
           url: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
           username: GitHub Actions - LUKASZ-JK
@@ -91,7 +91,7 @@ jobs:
             **Repository:** `${{ github.repository }}`
             **Branch:** `${{ github.head_ref || github.ref_name }}`
             **Commit:** `${{ github.event.pull_request.head.sha || github.sha }}`
-            **Author:** `${{ github.event.pull_request.user.login || github.event.head_commit.author.name || github.actor }}`
+            **Author:** `${{ github.event.pull_request.user.login || github.event.head_commit.author.name }}`
             **Workflow:** `${{ github.workflow }}`
             **Job:** `${{ github.job }}`
 
