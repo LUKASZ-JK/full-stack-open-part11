@@ -24,6 +24,5 @@ describe('<PokemonList />', () => {
     )
     expect(screen.getByText('bulbasaur')).toBeVisible()
     expect(screen.getByText('eevee')).toBeVisible()
-    expect(screen.getByText('ThisWillSurelyFail')).toBeVisible()
   })
 })
