@@ -19,7 +19,8 @@ app.get('/version', (_req, res) => {
 app.get('/health', async (_req, res) => {
   try {
     //check if external API is reachable
-    await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=50')
+    //simulate broken api
+    await axios.get('https://pokeapi.co/api/v3/pokemon/?limit=50')
     res.status(200).send('ok')
   // eslint-disable-next-line no-unused-vars
   } catch (error) {
